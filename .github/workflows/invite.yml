@@ -42,7 +42,7 @@ jobs:
             } catch (error) {
               if (error.status === 422) {
                 core.setOutput('status', 'already');
-                core.setOutput('message', `You already have a pending invitation or are a member. Go to ${inviteUrl} to accept.`);
+                core.setOutput('message', `You already have a pending invitation or are a member. Go to ${inviteUrl} to accept. If you can't find an invite page, refer to this Brightspace Thread: https://brightspace.carleton.ca/d2l/le/473774/discussions/threads/931928/View`);
               } else {
                 core.setOutput('status', 'failed');
                 core.setOutput('message', `Could not send an invite (HTTP ${error.status ?? 'unknown'}). A maintainer will follow up.`);
